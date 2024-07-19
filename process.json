@@ -1,0 +1,36 @@
+{
+  "apps" : [{
+    "name"      : "rest_api",
+    "script"    : "./server.js",
+    "error_file": "./logs/err_main.log",
+    "out_file" : "./logs/out_main.log",
+    "instances" : 1,
+    "exec_mode" : "cluster",
+    "watch"     : false,
+    "ignore_watch" : ["*.log"],
+    "kill_timeout" : 3000,
+    "wait_ready": true,
+    "listen_timeout" : 3000,
+    "env_development": {
+      "NODE_ENV": "development",
+      "NODE_PORT":3000,
+
+      "DB_HOST":"127.0.0.1",
+      "DB_PORT": "3306",
+      "DB_USER": "root",
+      "DB_PASSWORD": "password",
+      "DB_NAME": "qr_code_menu",
+      "DB_DIALECT": "mysql"
+    },
+    "env_production" : {
+      "NODE_ENV": "production",
+      "NODE_PORT": 3001,
+      "DB_HOST":"srv604.hstgr.io",
+      "DB_PORT": "3306",
+      "DB_USER": "u289965850_quyen",
+      "DB_PASSWORD": "Bioz@090684",
+      "DB_NAME": "u289965850_bcu_demo_01",
+      "DB_DIALECT": "mysql"
+    }
+  }]
+}
