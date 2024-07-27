@@ -36,13 +36,13 @@ module.exports = {
     },
 
     getAll: function (req, res) {
-        let coffeeShopId =
-            (req.query && req.query.coffeeShopId) ||
-            (req.body && req.body.coffeeShopId) ||
+        let tableId =
+            (req.query && req.query.tableId) ||
+            (req.body && req.body.tableId) ||
             "";
 
         OrderManager.getAll(
-            coffeeShopId,
+            tableId,
             function (
                 errorCode,
                 errorMessage,

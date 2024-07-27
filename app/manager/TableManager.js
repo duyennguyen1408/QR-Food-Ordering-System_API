@@ -216,7 +216,7 @@ module.exports = {
             };
 
             // Generate the QR code URL without tableId first
-            const tempQRCodeData = `http://localhost:5173/coffee-shops/${
+            const tempQRCodeData = `http://192.168.1.102:5173/coffee-shops/${
                 tableData.coffeeShopId
             }/tables/temp?table-name=${encodeURIComponent(
                 tableData.tableName
@@ -244,7 +244,7 @@ module.exports = {
                         const tableId = result.id; // Assuming Sequelize returns the id as result.id
 
                         // Generate the final QR code URL with the actual tableId
-                        const finalQRCodeData = `http://localhost:5173/coffee-shops/${
+                        const finalQRCodeData = `http://192.168.1.102:5173/coffee-shops/${
                             tableData.coffeeShopId
                         }/tables/${tableId}?table-name=${encodeURIComponent(
                             tableData.tableName

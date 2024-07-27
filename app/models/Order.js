@@ -21,15 +21,7 @@ let Order = MySequelize.define(
                 key: "id",
             },
         },
-        coffeeShopId: {
-            field: "coffee_shop_id",
-            type: Sequelize.INTEGER(11),
-            allowNull: false,
-            references: {
-                model: this.CoffeeShop,
-                key: "id",
-            },
-        },
+
         orderDate: {
             field: "order_date",
             type: Sequelize.DATE,

@@ -10,7 +10,6 @@ module.exports = {
             let attributes = [
                 "id",
                 "tableId",
-                "coffeeShopId",
                 "orderDate",
                 "totalPrice",
                 "status",
@@ -34,12 +33,11 @@ module.exports = {
         }
     },
 
-    getAll: function (coffeeShopId, callback) {
+    getAll: function (tableId, callback) {
         try {
             let attributes = [
                 "id",
                 "tableId",
-                "coffeeShopId",
                 "orderDate",
                 "totalPrice",
                 "status",
@@ -49,7 +47,7 @@ module.exports = {
             ];
             let where = {};
             where.deleted = Constant.DELETED.NO;
-            if (coffeeShopId) where.coffeeShopId = coffeeShopId;
+            if (tableId) where.tableId = tableId;
 
             Order.findAndCountAll({
                 attributes: attributes,
@@ -73,7 +71,6 @@ module.exports = {
 
             where.id = orderId;
             queryObj.tableId = updatedData.tableId;
-            queryObj.coffeeShopId = updatedData.coffeeShopId;
             queryObj.totalPrice = updatedData.totalPrice;
             queryObj.status = updatedData.status;
             queryObj.updatedAt = new Date();
@@ -201,7 +198,6 @@ module.exports = {
         try {
             let queryObj = {};
             queryObj.tableId = orderData.tableId;
-            queryObj.coffeeShopId = orderData.coffeeShopId;
             queryObj.orderDate = new Date();
             queryObj.totalPrice = orderData.totalPrice;
             queryObj.status = orderData.status || "Confirmed";

@@ -1,47 +1,48 @@
 {
-  "name": "rest_api",
-  "version": "0.4.0",
-  "private": false,
-  "description": "Rest API boiled code for Nodejs, express and mysql",
-  "apidoc": {
-    "title": "API DOCS",
+    "name": "rest_api",
     "version": "0.4.0",
-    "url": "http://localhost:3000",
-    "sampleUrl": "http://localhost:3000"
-  },
-  "engines": {
-    "node": "16.x"
-  },
-  "main": "server.js",
-  "scripts": {
-    "debug": "nodemon server.js",
-    "start": "node server.js",
-    "gen_api_doc": "apidoc -i app/routes/ -o ./public/docs/"
-  },
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.17.1",
-    "cors": "^2.8.5",
-    "express": "^4.15.2",
-    "jsonwebtoken": "^9.0.1",
-    "method-override": "^2.3.8",
-    "moment": "^2.30.1",
-    "mysql2": "^2.3.3",
-    "qr-image": "^3.2.0",
-    "qrcode": "^1.5.3",
-    "sequelize": "^6.6.5",
-    "socket.io": "^4.7.5",
-    "uuid": "^9.0.1",
-    "validator": "^13.11.0"
-  },
-  "devDependencies": {
-    "apidoc": "^0.29.0",
-    "morgan": "^1.9.1"
-  },
-  "keywords": [
-    "node",
-    "express"
-  ],
-  "author": "duyennguyen",
-  "license": "MIT"
+    "private": false,
+    "description": "Rest API boiled code for Nodejs, express and mysql",
+    "apidoc": {
+        "title": "API DOCS",
+        "version": "0.4.0",
+        "url": "http://192.168.1.102:3000",
+        "sampleUrl": "http://192.168.1.102:3000"
+    },
+    "engines": {
+        "node": "16.x"
+    },
+    "main": "server.js",
+    "scripts": {
+        "debug": "nodemon server.js",
+        "start": "node server.js",
+        "gen_api_doc": "apidoc -i app/routes/ -o ./public/docs/"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.17.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.15.2",
+        "jsonwebtoken": "^9.0.1",
+        "method-override": "^2.3.8",
+        "moment": "^2.30.1",
+        "mysql2": "^2.3.3",
+        "qr-image": "^3.2.0",
+        "qrcode": "^1.5.3",
+        "sequelize": "^6.6.5",
+        "socket.io": "^4.7.5",
+        "uuid": "^9.0.1",
+        "validator": "^13.11.0"
+    },
+    "devDependencies": {
+        "apidoc": "^0.29.0",
+        "morgan": "^1.9.1"
+    },
+    "keywords": [
+        "node",
+        "express"
+    ],
+    "author": "duyennguyen",
+    "license": "MIT"
 }
