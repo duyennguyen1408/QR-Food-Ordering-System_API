@@ -6,8 +6,8 @@
     "apidoc": {
         "title": "API DOCS",
         "version": "0.4.0",
-        "url": "http://192.168.1.102:3000",
-        "sampleUrl": "http://192.168.1.102:3000"
+        "url": "https://qr-food-ordering-system-d43yfytpl-quynh-duyens-projects.vercel.app/",
+        "sampleUrl": "https://qr-food-ordering-system-d43yfytpl-quynh-duyens-projects.vercel.app/"
     },
     "engines": {
         "node": "16.x"

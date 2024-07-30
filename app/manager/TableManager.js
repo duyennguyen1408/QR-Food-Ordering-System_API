@@ -215,8 +215,7 @@ module.exports = {
                 qrCodeExpiresAt: moment().add(1, "hours").toDate(),
             };
 
-            // Generate the QR code URL without tableId first
-            const tempQRCodeData = `http://192.168.1.102:5173/coffee-shops/${
+            const tempQRCodeData = `https://qr-food-ordering-system-d43yfytpl-quynh-duyens-projects.vercel.app/coffee-shops/${
                 tableData.coffeeShopId
             }/tables/temp?table-name=${encodeURIComponent(
                 tableData.tableName
@@ -235,16 +234,13 @@ module.exports = {
                     );
                 }
 
-                // Assign the generated QR code to the queryObj
                 queryObj.qrCode = qrCode;
 
-                // Create the table with the qrCode field
                 Table.create(queryObj)
                     .then((result) => {
-                        const tableId = result.id; // Assuming Sequelize returns the id as result.id
+                        const tableId = result.id;
 
-                        // Generate the final QR code URL with the actual tableId
-                        const finalQRCodeData = `http://192.168.1.102:5173/coffee-shops/${
+                        const finalQRCodeData = `https://qr-food-ordering-system-d43yfytpl-quynh-duyens-projects.vercel.app/coffee-shops/${
                             tableData.coffeeShopId
                         }/tables/${tableId}?table-name=${encodeURIComponent(
                             tableData.tableName
@@ -267,7 +263,6 @@ module.exports = {
                                     );
                                 }
 
-                                // Update the table with the final QR code
                                 Table.update(
                                     { qrCode: newQRCode },
                                     { where: { id: tableId } }
