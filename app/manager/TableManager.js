@@ -215,7 +215,7 @@ module.exports = {
                 qrCodeExpiresAt: moment().add(1, "hours").toDate(),
             };
 
-            const tempQRCodeData = `https://qr-food-ordering-system-d43yfytpl-quynh-duyens-projects.vercel.app/coffee-shops/${
+            const tempQRCodeData = `https://qr-food-ordering-system-ui.vercel.app/coffee-shops/${
                 tableData.coffeeShopId
             }/tables/temp?table-name=${encodeURIComponent(
                 tableData.tableName
@@ -240,7 +240,7 @@ module.exports = {
                     .then((result) => {
                         const tableId = result.id;
 
-                        const finalQRCodeData = `https://qr-food-ordering-system-d43yfytpl-quynh-duyens-projects.vercel.app/coffee-shops/${
+                        const finalQRCodeData = `https://qr-food-ordering-system-ui.vercel.app/coffee-shops/${
                             tableData.coffeeShopId
                         }/tables/${tableId}?table-name=${encodeURIComponent(
                             tableData.tableName
