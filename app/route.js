@@ -10,5 +10,4 @@ module.exports = function (app) {
     require("./routes/Order")(app);
     require("./routes/OrderDetail")(app);
     require("./routes/Payment")(app);
-    require("./routes/Discount")(app);
 };
